@@ -1,0 +1,4 @@
+spring:
+  application:
+    name: Telegram_bot_for_Miro
+
