@@ -48,7 +48,7 @@ public class OAuthController {
                 .add("client_id", clientId)
                 .add("client_secret", clientSecret)
                 .add("code", code)
-                .add("redirect_uri", "http://localhost:8080/oauth/callback")
+                .add("redirect_uri", redirectUri)
                 .build();
 
         Request request = new Request.Builder()
