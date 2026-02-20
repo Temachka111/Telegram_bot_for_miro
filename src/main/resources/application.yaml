@@ -11,6 +11,7 @@ miro:
   client-id: ${MIRO_CLIENT_ID}
   client-secret: ${MIRO_CLIENT_SECRET}
   board-id: ${MIRO_BOARD_ID}
+  redirect-uri: ${MIRO_REDIRECT_URI}
 
 openai:
   api-key: ${OPENAI_API_KEY}
