@@ -2,3 +2,15 @@ spring:
   application:
     name: Telegram_bot_for_Miro
 
+telegram:
+  bot:
+    username: Temka_for_miro_bot
+    token: ${TELEGRAM_BOT_TOKEN}
+
+miro:
+  client-id: ${MIRO_CLIENT_ID}
+  client-secret: ${MIRO_CLIENT_SECRET}
+  board-id: ${MIRO_BOARD_ID}
+
+openai:
+  api-key: ${OPENAI_API_KEY}
