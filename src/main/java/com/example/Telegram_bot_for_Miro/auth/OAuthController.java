@@ -25,11 +25,11 @@ public class OAuthController {
     private final TokenStorage tokenStorage;
     private final OkHttpClient client = new OkHttpClient();
     private final ObjectMapper mapper = new ObjectMapper();
+    @Value("${miro.redirect-uri}")
+    private String redirectUri;
 
     @GetMapping("/oauth/authorize")
     public String authorize() {
-
-        String redirectUri = "http://localhost:8080/oauth/callback";
 
         String url = "https://miro.com/oauth/authorize" +
                 "?response_type=code" +
@@ -59,7 +59,7 @@ public class OAuthController {
         try (Response response = client.newCall(request).execute()) {
 
             String json = response.body().string();
-            System.out.println("MIRO RESPONSE: " + json); // 👈 для дебага
+            System.out.println("MIRO RESPONSE: " + json);
 
             JsonNode node = mapper.readTree(json);
 
